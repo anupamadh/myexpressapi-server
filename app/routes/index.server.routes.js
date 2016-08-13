@@ -13,7 +13,12 @@ module.exports = function(app) {
   // app.get('/', staticPageController.renderHome);
   // app.get('/about', staticPageController.renderAbout);
   // app.get('/contact', staticPageController.renderContact);
-
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+  
   app.get('/users',usersController.index);
   //To display data for a particular member
   //app.get('/users/:name',usersController.index);
