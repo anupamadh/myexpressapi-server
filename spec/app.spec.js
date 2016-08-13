@@ -5,10 +5,6 @@ var base_url = "http://localhost:8000/"
 var about_url = base_url + 'about';
 var contact_url = base_url + 'contact';
 
-// function check200(err, response, body) {
-//   expect(response.statusCode).toBe(200);
-//   done();
-// }
 
 
 describe("Express Server", function() {
