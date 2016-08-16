@@ -10,6 +10,7 @@ for (var i = 0; i < members.length; i++) {
         return res.json(user)
       }
     }
-
+    res.status(404);
+    res.send('');
   }
 }
